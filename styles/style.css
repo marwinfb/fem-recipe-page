@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Young Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/young-serif.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --color-primary-nutmeg: hsl(14, 45%, 36%);
+  --color-primary-dark-raspberry: hsl(332, 51%, 32%);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-rose-white: hsl(330, 100%, 98%);
+  --color-neutral-eggshell: hsl(30, 54%, 90%);
+  --color-neutral-light-grey: hsl(30, 18%, 87%);
+  --color-neutral-wenge-brown: hsl(30, 10%, 34%);
+  --color-neutral-dark-charcoal: hsl(24, 5%, 18%);
+
+  --font-primary: "Young Serif", sans-serif;
+  --font-secondary: "Outfit", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  color: var(--color-primary-nutmeg);
+  margin-bottom: 1.5rem;
+}
+
+hr.solid {
+  border-top: 1px solid var(--color-neutral-light-grey);
+}
+
+span.highlight {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ol li {
+  counter-increment: num;
+  display: list-item;
+}
+
+ol li::marker {
+  display: list-item;
+  content: "" counter(num) ".      ";
+  color: var(--color-primary-dark-raspberry);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+} */
+
+ol li {
+  counter-increment: muffins;
+}
+
+ol li:before {
+  content: counter(muffins) ". ";
+}
+
+ol {
+  list-style: none;
+  counter-reset: muffins;
+}
+
+body {
+  background-color: var(--color-neutral-eggshell);
+  color: var(--color-neutral-wenge-brown);
+  font: var(--font-weight-regular) 1rem/1.6 var(--font-secondary);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.container > * + * {
+  margin-top: 2rem;
+}
+
+.recipe {
+  background-color: var(--color-neutral-white);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.recipe__hero-img {
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.recipe__about-name {
+  color: var(--color-neutral-dark-charcoal);
+  font-size: 40px;
+  font-weight: var(--font-weight-regular);
+}
+
+.recipe__preparation {
+  background-color: var(--color-neutral-rose-white);
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+}
+
+.recipe__preparation .title {
+  font-family: var(--font-secondary);
+  font-size: 1.25rem;
+  color: var(--color-primary-dark-raspberry);
+}
+
+/* .recipe__preparation .list li::marker,
+.recipe__ingredients .list li::marker {
+
+  color: var(--color-primary-dark-raspberry);
+} */
