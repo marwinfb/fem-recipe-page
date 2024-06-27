@@ -46,15 +46,16 @@
 }
 
 h1,
-h2 {
+h3 {
   font: var(--font-weight-regular) var(--font-size-md) / 1 var(--font-primary);
   color: var(--color-primary-nutmeg);
   margin-bottom: 1.5rem;
 }
 
-h3 {
+h2 {
   font: var(--font-weight-medium) var(--font-size-sm) / 1 var(--font-secondary);
   color: var(--color-primary-dark-raspberry);
+  margin-bottom: 1rem;
 }
 
 span.highlight {
@@ -107,6 +108,7 @@ body {
 
 .recipe__img img {
   border-radius: 0.75rem;
+  height: auto;
 }
 
 .recipe__about h1 {
